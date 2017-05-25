@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import { key } from '../../key.js'
 import SearchBar from '../search_bar/search_bar';
 import { VideoList } from '../video_list/video_list';
 import { VideoDetail } from '../video_detail/video_detail';
 
-const API_KEY = 
+const API_KEY = key;
 
 export default class App extends Component {
   constructor() {
