@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import { key } from '../../key.js'
-import SearchBar from '../search_bar/search_bar';
-import { VideoList } from '../video_list/video_list';
-import { VideoDetail } from '../video_detail/video_detail';
+import SearchBar from '../SearchBar/SearchBar';
+import { VideoList } from '../VideoList/VideoList';
+import { VideoDetail } from '../VideoDetail/VideoDetail';
 
 const API_KEY = key;
 
@@ -37,10 +37,12 @@ export default class App extends Component {
     return (
       <div className="App">
         <SearchBar onSearchInputChange={videoSearch}/>
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          videos={this.state.videos}
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}/>
+        <section className='video-data-container'>
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList
+            videos={this.state.videos}
+            onVideoSelect={selectedVideo => this.setState({selectedVideo})}/>
+        </section>
       </div>
     );
   }
