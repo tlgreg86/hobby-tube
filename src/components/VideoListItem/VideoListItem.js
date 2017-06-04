@@ -1,17 +1,18 @@
 import React from 'react';
+import './VideoListItem.css'
 
 export const VideoListItem = ({ video, onVideoSelect }) => {
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return(
-    <li onClick={() => onVideoSelect(video)}>
-      <div>
+    <li className='video-list-item' onClick={() => onVideoSelect(video)}>
+      <div className='list-item-container'>
         <div>
           <img alt='video thumbnail' src={imageUrl}/>
         </div>
 
         <div>
-          <div>{video.snippet.title}</div>
+          <div className='list-item-title'>{video.snippet.title}</div>
         </div>
       </div>
     </li>

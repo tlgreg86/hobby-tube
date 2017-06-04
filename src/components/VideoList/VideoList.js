@@ -1,5 +1,6 @@
 import React from 'react';
-import { VideoListItem } from '../video_list_item/video_list_item'
+import { VideoListItem } from '../VideoListItem/VideoListItem';
+import './VideoList.css';
 
 export const VideoList = (props) => {
 
@@ -13,8 +14,10 @@ export const VideoList = (props) => {
   })
 
   return(
-    <ul className='video-list'>
-      {videoItems}
-    </ul>
+    <div className='video-list-container'>
+      <ul className='video-list'>
+        {videoItems}
+      </ul>
+    </div>
   )
 }

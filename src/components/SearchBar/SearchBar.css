@@ -1,0 +1,18 @@
+.search-container {
+  text-align: center;
+  padding-top: 20px;
+  background-color: rgba(56, 56, 56, 0.99);
+}
+
+.search-input {
+  width: 30%;
+  height: 21px;
+  font-size: .9em;
+  padding-left: 10px;
+}
+
+.submit-button {
+  font-size: 0.9em;
+  height: 27px;
+  margin-left: 10px;
+}
