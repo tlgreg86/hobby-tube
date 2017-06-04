@@ -12,7 +12,7 @@ export const VideoDetail = ({ video }) => {
   return(
     <section className='main-container'>
       <section>
-        <iframe src={url}></iframe>
+        <iframe src={url} title={video.snippet.title}></iframe>
       </section>
       <section className='details-container'>
         <section className='main-snippet-title'>{video.snippet.title}</section>

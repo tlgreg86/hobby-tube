@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import './App.css'
 
 import { key } from '../../key.js'
 import SearchBar from '../SearchBar/SearchBar';
@@ -32,11 +32,12 @@ export default class App extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce((userSearch) => { this.handleFetch(userSearch) }, 300)
+    // const videoSearch = _.debounce((userSearch) => { this.handleFetch(userSearch) }, 300)
 
     return (
       <div className="App">
-        <SearchBar onSearchInputChange={videoSearch}/>
+        <header>HobbyTube</header>
+        <SearchBar onSearchInputChange={this.handleFetch.bind(this)}/>
         <section className='video-data-container'>
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList
