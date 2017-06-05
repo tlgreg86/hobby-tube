@@ -32,8 +32,6 @@ export default class App extends Component {
   }
 
   render() {
-    // const videoSearch = _.debounce((userSearch) => { this.handleFetch(userSearch) }, 300)
-
     return (
       <div className="App">
         <header>HobbyTube</header>
