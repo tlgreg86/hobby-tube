@@ -4,7 +4,7 @@ import './App.css'
 import { key } from '../../key.js'
 import SearchBar from '../SearchBar/SearchBar';
 import { VideoList } from '../VideoList/VideoList';
-import { VideoDetail } from '../VideoDetail/VideoDetail';
+import VideoDetail from '../VideoDetail/VideoDetail';
 
 const API_KEY = key;
 
