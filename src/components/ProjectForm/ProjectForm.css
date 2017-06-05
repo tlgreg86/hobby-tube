@@ -1,0 +1,22 @@
+.new-idea-form {
+  padding-top: 20px;
+  background-color: rgba(56, 56, 56, 0.99);
+  text-align: center;
+}
+
+.create-new-project {
+  margin: 0 0 20px 0;
+  width: 30%;
+  height: 21px;
+  font-size: .9em;
+  padding-left: 10px;
+  outline-color: #00D8FF;
+}
+
+select {
+  height: 30px;
+  width: 32%;
+  border-style: groove;
+  font-size: .9em;
+  outline-color: #00D8FF;
+}

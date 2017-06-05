@@ -9,9 +9,10 @@
   height: 21px;
   font-size: .9em;
   padding-left: 10px;
+  outline-color: #00D8FF;
 }
 
-.submit-button {
+button {
   font-size: 0.9em;
   height: 27px;
   margin-left: 10px;
