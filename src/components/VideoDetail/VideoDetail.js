@@ -14,16 +14,18 @@ export default class VideoDetail extends Component {
 
   handleProjectSubmit(input) {
     this.state.projects.push(input)
+    const addProject = Object.assign({}, this.state.projectContents, {[input]: []})
     this.setState({
-      input: ''
+      input: '',
+      projectContents: addProject
     })
   }
 
-  handleAddVideoToProject(id, video) {
-    const projectObj = {[id]: video, projectName: {project: this.state.selectedProject}}
-    const addObject = Object.assign(this.state.projectContents, projectObj)
+  handleAddVideoToProject(project, videoTitle) {
+    this.state.projectContents[project].push({video: videoTitle})
+    const newProjectContents = this.state.projectContents
     this.setState({
-      projectContents: addObject
+      projectContents: newProjectContents
     })
   }
 
@@ -60,7 +62,7 @@ export default class VideoDetail extends Component {
               )
             })}
           </select>
-          <button onClick={() => {this.handleAddVideoToProject(this.props.video.id.videoId, this.props.video.snippet.thumbnails.default.url)}}>Submit</button>
+          <button onClick={() => {this.handleAddVideoToProject(this.state.selectedProject, this.props.video.snippet.title)}}>Submit</button>
         </form>
         <section>
           <iframe src={url} title={this.props.video.snippet.title}></iframe>
