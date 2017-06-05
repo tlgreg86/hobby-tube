@@ -4,7 +4,8 @@ import './App.css'
 import { key } from '../../key.js'
 import SearchBar from '../SearchBar/SearchBar';
 import { VideoList } from '../VideoList/VideoList';
-import VideoDetail from '../VideoDetail/VideoDetail';
+import {VideoDetail} from '../VideoDetail/VideoDetail';
+import ProjectForm from '../ProjectForm/ProjectForm';
 
 const API_KEY = key;
 
@@ -36,6 +37,7 @@ export default class App extends Component {
       <div className="App">
         <header>HobbyTube</header>
         <SearchBar onSearchInputChange={this.handleFetch.bind(this)}/>
+        <ProjectForm video={this.state.selectedVideo} />
         <section className='video-data-container'>
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList
