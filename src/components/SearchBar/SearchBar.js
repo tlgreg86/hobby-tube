@@ -10,7 +10,6 @@ export default class SearchBar extends Component {
   }
 
   onSearchInputChange(searchInput) {
-    // this.setState({ searchInput })
     this.props.onSearchInputChange(searchInput)
   }
 

@@ -11,6 +11,21 @@ export const VideoDetail = ({ video }) => {
 
   return(
     <section className='main-container'>
+      <form
+        onSubmit={(e) => {e.preventDefault()}}
+        className='new-idea-form'>
+        <input
+          className='create-new-project'
+          placeholder='Create new project' />
+        <button
+          className='submit-new-project'>Submit</button>
+        <br/>
+        <br/>
+        <select className='project-dropdown'>
+          <option>Add video to a project</option>
+        </select>
+        <button>Submit</button>
+      </form>
       <section>
         <iframe src={url} title={video.snippet.title}></iframe>
       </section>
